@@ -1,30 +1,30 @@
-import React, { useState } from "react";
-import "./Colors.css";
+const THEMES = ["light", "dark"];
 
-const COLORS = ["pink", "green", "blue", "yellow", "purple"];
+function Colors({ theme, setTheme }) {
+  const onButtonClick = (selectedTheme) => () => {
+    setTheme(selectedTheme);
+  };
 
-function Colors() {
-  const [backgroundColor, setBackgroundColor] = useState(COLORS[0]);
-
-  const onButtonClick = (color) => () => {
-    setBackgroundColor(color);
+  const getIcon = (themeOption) => {
+    return themeOption === "light" ? "light_mode" : "dark_mode";
   };
 
   return (
-    <div
-      className="Colors"
-      style={{
-        backgroundColor,
-      }}
-    >
-      {COLORS.map((color) => (
+    <div className="flex gap-2">
+      {THEMES.map((themeOption) => (
         <button
           type="button"
-          key={color}
-          onClick={onButtonClick(color)}
-          className={backgroundColor === color ? "selected" : ""}
+          key={themeOption}
+          onClick={onButtonClick(themeOption)}
+          className={`px-4 py-2 font-medium transition-all duration-200 text-2xl hover:scale-110 ${
+            theme === themeOption
+              ? "opacity-100"
+              : "opacity-60 hover:opacity-80"
+          }`}
         >
-          {color}
+          <span className="material-icons text-2xl">
+            {getIcon(themeOption)}
+          </span>
         </button>
       ))}
     </div>
