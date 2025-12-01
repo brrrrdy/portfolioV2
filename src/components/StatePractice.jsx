@@ -28,7 +28,7 @@ export default function ProjectGallery() {
         {showMore ? "Hide" : "Show"} details
       </button>
       {showMore && <p>{project.description}</p>}
-      <img src={project.HTMLlink} alt={project.featured} />
+      <img src={project.HTMLlink} alt={project.tags} />
     </>
   );
 }
