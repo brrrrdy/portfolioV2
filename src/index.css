@@ -1,4 +1,8 @@
+/* GOOGLE ICONS */
+
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+/* UNIVERSAL */
 
 * {
   margin: 0;
@@ -14,21 +18,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  transition: background-color 0.5s ease, color 0.5s ease;
+/* DAY AND NIGHT MODE */
+
+.app-dark {
+  --dark-text: #292929;
+  --light-text: #f9f8f8;
+  --dark-background: #2f4550;
+  --light-background: #586f7c;
+  --accent: #b8dbd9;
+  --button-border: #b8dbd9;
+
+  background-color: var(--dark-background);
+  color: var(--light-text);
 }
 
-.app.light {
-  background-color: white !important;
-  color: #1f2937 !important;
-}
+.app-light {
+  --dark-text: #5e4b56;
+  --light-text: #5e4b56;
+  --dark-background: #dbe7e4;
+  --light-background: #eddcd2;
+  --accent: #dbe7e4;
+  --button-border: #5e4b56;
 
-.app.dark {
-  background-color: #1e3a8a !important;
-  color: white !important;
+  background-color: var(--light-background);
+  color: var(--dark-text);
 }
 
 .top-anchor {
@@ -42,18 +55,6 @@ body {
   top: 1rem;
   left: 1rem;
   z-index: 10;
-}
-
-.main-content {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.title {
-  font-size: 2.25rem;
-  font-weight: bold;
 }
 
 .theme-buttons {
@@ -86,6 +87,27 @@ body {
 
 .theme-button.inactive:hover {
   opacity: 0.8;
+}
+
+/* HOMEPAGE */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: bold;
 }
 
 .material-icons {
