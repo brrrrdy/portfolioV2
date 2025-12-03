@@ -1,3 +1,17 @@
+# Portfolio Site V2
+
+## Issues
+
+✅
+❌
+☑️
+
+## Requirements
+
+- Mobile first
+- WAI-ARIA
+- Audit accessibility
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
