@@ -253,6 +253,17 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.technology-item.selected {
+  background-color: var(--dark-background);
+  color: var(--light-text);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.technology-item.selected .technology-name {
+  color: var(--light-text);
+}
+
 .technology-name {
   font-size: 1rem;
   font-weight: 600;
