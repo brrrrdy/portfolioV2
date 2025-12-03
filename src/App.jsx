@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./index.css";
 import Colors from "./components/Colors";
-import ProjectGallery from "./components/StatePractice";
+import ProjectsGallery from "./components/ProjectsGallery";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -17,7 +17,9 @@ function App() {
       <div className="main-content">
         <h1 className="title">Portfolio Coming Soon</h1>
       </div>
-      <div className="Gallery"></div>
+      <div className="Gallery">
+        <ProjectsGallery></ProjectsGallery>
+      </div>
     </div>
   );
 }
