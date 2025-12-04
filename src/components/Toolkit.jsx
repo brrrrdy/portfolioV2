@@ -1,17 +1,18 @@
 import React from "react";
 import { projects } from "../content/projects.json";
 
-function Toolkit({ selectedTech, setSelectedTech }) {
+function Toolkit({ selectedTechs, setSelectedTechs }) {
   // Extract all unique tags from all projects
   const allTags = projects.flatMap((project) => project.tags);
   const uniqueTechnologies = [...new Set(allTags)].sort();
 
   const handleTechClick = (tech) => {
-    // If clicking the same tech, deselect it
-    if (selectedTech === tech) {
-      setSelectedTech(null);
+    // If tech is already selected, remove it
+    if (selectedTechs.includes(tech)) {
+      setSelectedTechs(selectedTechs.filter((t) => t !== tech));
     } else {
-      setSelectedTech(tech);
+      // Add tech to selected array
+      setSelectedTechs([...selectedTechs, tech]);
     }
   };
 
@@ -20,8 +21,8 @@ function Toolkit({ selectedTech, setSelectedTech }) {
       <div className="section-content">
         <h2 className="section-title">My Toolkit</h2>
         <p className="section-subtitle">
-          Technologies and tools I've used across my projects. Click any
-          technology to see related projects.
+          Click multiple technologies to filter projects that use ALL selected
+          technologies.
         </p>
 
         <div className="technologies-grid">
@@ -29,7 +30,7 @@ function Toolkit({ selectedTech, setSelectedTech }) {
             <div
               key={index}
               className={`technology-item ${
-                selectedTech === tech ? "selected" : ""
+                selectedTechs.includes(tech) ? "selected" : ""
               }`}
               onClick={() => handleTechClick(tech)}
             >

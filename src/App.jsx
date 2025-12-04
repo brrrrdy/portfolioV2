@@ -6,7 +6,7 @@ import Toolkit from "./components/Toolkit";
 
 function App() {
   const [theme, setTheme] = useState("light");
-  const [selectedTech, setSelectedTech] = useState(null);
+  const [selectedTechs, setSelectedTechs] = useState([]);
 
   return (
     <div className={`app app-${theme}`}>
@@ -21,13 +21,13 @@ function App() {
       </div>
 
       <div className="Gallery">
-        <ProjectsGallery selectedTech={selectedTech} />
+        <ProjectsGallery selectedTechs={selectedTechs} />
       </div>
 
       <div className="Toolkit">
         <Toolkit
-          selectedTech={selectedTech}
-          setSelectedTech={setSelectedTech}
+          selectedTechs={selectedTechs}
+          setSelectedTechs={setSelectedTechs}
         />
       </div>
     </div>

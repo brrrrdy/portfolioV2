@@ -1,7 +1,7 @@
 import { projects } from "../content/projects.json";
 import Card from "../helpers/Card";
 
-function ProjectsGallery({ selectedTech }) {
+function ProjectsGallery({ selectedTechs }) {
   // shuffle array and get random projects
   const getRandomProjects = (projectsArray, count) => {
     const shuffled = [...projectsArray].sort(() => Math.random() - 0.5);
@@ -11,13 +11,18 @@ function ProjectsGallery({ selectedTech }) {
   let displayProjects;
   let galleryTitle;
 
-  if (selectedTech) {
-    // filter projects that include the selected technology
+  if (selectedTechs && selectedTechs.length > 0) {
+    // filter projects that include all selected techs
     const filteredProjects = projects.filter((project) =>
-      project.tags.includes(selectedTech)
+      selectedTechs.every((tech) => project.tags.includes(tech))
     );
     displayProjects = getRandomProjects(filteredProjects, 4);
-    galleryTitle = `Projects using ${selectedTech}`;
+
+    if (selectedTechs.length === 1) {
+      galleryTitle = `Projects using ${selectedTechs[0]}`;
+    } else {
+      galleryTitle = `Projects using ${selectedTechs.join(" + ")}`;
+    }
   } else {
     // show featured projects by default
     const featuredProjects = projects.filter(
