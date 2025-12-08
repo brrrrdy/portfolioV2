@@ -43,3 +43,8 @@ body {
   word-wrap: normal;
   direction: ltr;
 }
+
+/* style debug */
+* {
+  border: 1px solid green !important;
+}
