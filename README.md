@@ -4,7 +4,7 @@
 
 ✅
 ❌
-☑️
+☑️ Move toolkit adjacent to projects
 
 ## Requirements
 
