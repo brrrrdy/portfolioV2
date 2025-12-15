@@ -13,10 +13,110 @@
 }
 
 .footer-content {
-  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10rem;
 }
 
 .footer-content p {
   margin: 0;
   opacity: 0.8;
+}
+
+.footer-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-right: 2rem;
+
+  text-align: right;
+}
+
+.footer-github {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.github-logo {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+  padding: 2rem;
+}
+
+.footer-sitemap-container {
+  padding: 2rem;
+  text-align: left;
+}
+
+.footer-sitemap {
+  text-align: left;
+}
+
+.footer-sitemap h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.footer-sitemap ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-sitemap li {
+  margin: 0;
+}
+
+.footer-sitemap a {
+  color: var(--light-text);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.footer-sitemap a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-social {
+  padding: 2rem;
+  text-align: left;
+}
+
+.footer-social h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-logo {
+  width: 24px;
+  height: 24px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.social-links a:hover .social-logo {
+  opacity: 1;
 }
