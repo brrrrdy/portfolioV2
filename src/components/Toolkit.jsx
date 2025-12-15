@@ -20,9 +20,6 @@ function Toolkit({ selectedTechs, setSelectedTechs }) {
     <div className="toolkit-container">
       <div className="section-content">
         <h2 className="section-title">my toolkit</h2>
-        <p className="section-subtitle">
-          the technologies that I use every day in my work.
-        </p>
 
         <div className="technologies-grid">
           {uniqueTechnologies.map((tech, index) => (
