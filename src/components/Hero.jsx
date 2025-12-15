@@ -60,6 +60,20 @@ function Hero() {
             </span>
             <span className="cursor">|</span>
           </div>
+          <div className="link-content">
+            <a href="#" className="download-cv">
+              <span>download my cv</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 -960 960 960"
+              >
+                <path d="M440-240v-368L296-464l-56-56 240-240 240 240-56 56-144-144v368z" />
+              </svg>
+            </a>
+          </div>
         </div>
         <div className="image-container">
           <img src={tomImage} alt="Tom" />
