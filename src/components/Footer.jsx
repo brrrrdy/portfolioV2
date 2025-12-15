@@ -17,7 +17,7 @@ function Footer() {
             <div className="footer-sitemap">
               <ul>
                 <li>
-                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
                 </li>
                 <li>
                   <a href="#projects">Projects</a>

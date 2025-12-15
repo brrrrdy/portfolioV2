@@ -49,7 +49,7 @@ function Projects() {
         </div>
       </div>
 
-      <div className="Toolkit">
+      <div className="Toolkit" id="toolkit">
         <Toolkit
           selectedTechs={selectedTechs}
           setSelectedTechs={setSelectedTechs}

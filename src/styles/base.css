@@ -18,6 +18,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* UNIVERSAL TYPOGRAPHY */
 
 h2 {
@@ -31,6 +35,12 @@ h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: left;
+}
+
+/* SECTION ANCHORS */
+
+section {
+  scroll-margin-top: 80px;
 }
 
 /* APP CONTAINER */
