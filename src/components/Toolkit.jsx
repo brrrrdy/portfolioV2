@@ -2,9 +2,11 @@ import React from "react";
 import { projects } from "../content/projects.json";
 
 function Toolkit({ selectedTechs, setSelectedTechs }) {
-  // Extract all unique tags from all projects
+  // Extract all unique tags from all projects, excluding 'Game'
   const allTags = projects.flatMap((project) => project.tags);
-  const uniqueTechnologies = [...new Set(allTags)].sort();
+  const uniqueTechnologies = [...new Set(allTags)]
+    .filter((tech) => tech !== "Game")
+    .sort();
 
   const handleTechClick = (tech) => {
     // If tech is already selected, remove it

@@ -23,9 +23,9 @@ function Projects() {
     displayProjects = getRandomProjects(filteredProjects, 4);
 
     if (selectedTechs.length === 1) {
-      galleryTitle = `Projects using ${selectedTechs[0]}`;
+      galleryTitle = `my projects that use ${selectedTechs[0]}`;
     } else {
-      galleryTitle = `Projects using ${selectedTechs.join(" + ")}`;
+      galleryTitle = `my projects that use ${selectedTechs.join(", ")}`;
     }
   } else {
     // show featured projects by default
