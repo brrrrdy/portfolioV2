@@ -33,21 +33,19 @@ function Projects() {
       (project) => project.featured[0] === "y"
     );
     displayProjects = featuredProjects.slice(0, 4);
-    galleryTitle = "featured projects";
+    galleryTitle = "my projects";
   }
 
   return (
     <>
       <div className="projects-gallery">
-        <h2>{galleryTitle}</h2>
-        <p>
-          {displayProjects.length} project
-          {displayProjects.length !== 1 ? "s" : ""} found
-        </p>
-        <div className="gallery-grid">
-          {displayProjects.map((project) => (
-            <Card key={project.id} project={project} />
-          ))}
+        <div className="projects-container">
+          <h2>{galleryTitle}</h2>
+          <div className="gallery-grid">
+            {displayProjects.map((project) => (
+              <Card key={project.id} project={project} />
+            ))}
+          </div>
         </div>
       </div>
 

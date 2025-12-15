@@ -1,18 +1,24 @@
 /* PROJECTS GALLERY */
 
 .projects-gallery {
+  width: 100%;
+}
+
+.projects-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
-.projects-gallery h2 {
+.projects-container h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  text-align: center;
+  text-align: left;
+  width: 100%;
+  max-width: 800px;
 }
 
 .projects-gallery p {

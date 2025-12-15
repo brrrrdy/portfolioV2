@@ -1,6 +1,10 @@
 /* HERO SECTION */
 
 .hero-section {
+  width: 100%;
+}
+
+.hero-container {
   display: flex;
   flex-direction: column;
   align-items: center;
